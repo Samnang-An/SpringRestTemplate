@@ -1,7 +1,9 @@
 package web.dto;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,8 +16,8 @@ import lombok.SneakyThrows;
 @Setter
 @Getter
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class ProductDto {
 
   private long prodNum;
@@ -23,7 +25,7 @@ public class ProductDto {
   private String description;
   private double price;
 
-  private List<ReviewDto> reviewList;
+  private List<ReviewDto> reviewList = new ArrayList<>();
   private StockDto stock;
   private SupplierDto supplier;
 
@@ -43,8 +45,6 @@ public class ProductDto {
   @SneakyThrows
   public String toString() {
     ObjectMapper objectMapper = new ObjectMapper();
-    return objectMapper.writeValueAsString(this);
+    return "Product Items: {" + objectMapper.writeValueAsString(this) + "}";
   }
-
-
 }

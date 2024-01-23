@@ -13,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ReviewDto {
 
-  private long id;
   private int numStar;
   private String description;
+
 }

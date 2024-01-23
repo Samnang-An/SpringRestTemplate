@@ -18,4 +18,15 @@ public class ShoppingCartDto {
   private CustomerDto customer;
   private List<ProductItemDto> productItem;
 
+  @Override
+  public String toString() {
+    String str = "ShoppingCart: customer:" + customer.getCustomerName() + ";" + productItem.size()
+        + " items \n";
+    for (ProductItemDto item :
+        productItem) {
+      str = str + "{" + item.getProduct().getProdName() + " ; amount=" + item.getAmount() + "}\n";
+    }
+    return str;
+  }
+
 }

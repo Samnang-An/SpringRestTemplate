@@ -15,5 +15,4 @@ public class CustomerDto {
 
   private long id;
   private String customerName;
-
 }

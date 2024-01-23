@@ -15,8 +15,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ProductItemDto {
 
-  private long id;
   private int amount;
   private ProductDto product;
-
 }
