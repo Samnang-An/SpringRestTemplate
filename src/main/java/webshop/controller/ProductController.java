@@ -9,8 +9,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+<<<<<<< Updated upstream
 import org.springframework.web.bind.annotation.RequestParam;
 import webshop.controller.dto.ProductDto;
+=======
+import webshop.database.service.dto.ProductDto;
+import webshop.database.exception.NoProductFoundException;
+>>>>>>> Stashed changes
 import webshop.database.service.ProductService;
 
 @Controller
